@@ -1,4 +1,4 @@
-#### CGIHomework
+# CGIHomework
 
 Some Python scripts intended to work on Maya.
 
