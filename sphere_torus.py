@@ -18,3 +18,18 @@ cmds.delete()
 
 #creating a new shape: torus
 cmds.torus(name = 'torus', radius = 4, heightRatio = 0.5)
+
+#translate 'torus' by 1 unit along the x-axis
+cmds.move(1, 0, 0, 'torus')
+
+#scale 'torus' by half along y-axis
+cmds.scale(1, 0.5, 1, 'torus')
+
+#rotate 'torus by 45 degrees about the z-axis
+cmds.rotate(0, 0, 45, 'torus')
+
+#now move, scale, rotate 'torus' relative to its current
+#position, scale, rotation
+cmds.move(2, 0, 0, 'torus', relative = True)
+cmds.scale(1, 0.7, 1, 'torus', relative = True)
+cmds.rotate(0, 0, 10, 'torus', relative = True)
