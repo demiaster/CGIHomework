@@ -64,6 +64,28 @@ def placeInRows(listName, unitsAppart, objectW, axis):
         cmds.scale(objectW, objectW, objectW, listName[i])
 
     return listName
+	
+def randomPosition(listName, gauss1, gauss2, mult):
+    
+    """Place objects in a random position using gauss distribution
+    
+    - **parameters**, **types**, **return** and **return types**::
+        
+        :param listName: is a Python list of object names
+        :param gauss1: first parameter for gaussian's distribution
+        :param gauss1: first parameter for gaussian's distribution
+		:param mult: multiplying factor for translation
+        :return: objects in the list that are placed randomly
+        :rtype: list of maya objects
+                 
+    """
+    
+    for i in range(0, len(listName)):
+        cmds.move(random.gauss(gauss1 , gauss2) * mult,
+                  random.gauss(gauss1 , gauss2) * mult,
+                  random.gauss(gauss1 , gauss2) * mult,
+                  listName[i], relative = True)
+    return listName
  
  
 
