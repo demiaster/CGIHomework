@@ -81,6 +81,9 @@ def randomPosition(listName, gauss1, gauss2, mult):
     """
     
     for i in range(0, len(listName)):
+	
+		#relative flag to move the object
+		#relative to its current position
         cmds.move(random.gauss(gauss1 , gauss2) * mult,
                   random.gauss(gauss1 , gauss2) * mult,
                   random.gauss(gauss1 , gauss2) * mult,
