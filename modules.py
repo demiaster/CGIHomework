@@ -1,6 +1,9 @@
 # importing Python Maya commands
 import maya.cmds as cmds
 
+#importing random for casual sphere positioning
+import random
+
 
 def makeClones(name, num):
     """ Creates a list of duplicate objects
